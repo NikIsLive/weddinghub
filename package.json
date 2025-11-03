@@ -1,26 +1,25 @@
 {
   "name": "weddinghub",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Wedding and Social Gathering Event Management System",
+  "main": "server/index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
   },
-  "dependencies": {
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "next": "16.0.1"
-  },
+  "keywords": [
+    "wedding",
+    "event-management",
+    "social-gathering"
+  ],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.1"
+    "@tailwindcss/postcss": "^4.1.16",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
+    "tailwindcss": "^4.1.16"
   }
 }
